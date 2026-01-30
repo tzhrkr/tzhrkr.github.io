@@ -148,14 +148,27 @@ a:hover {
     <div class="myComputer"></div>
     <div class="label">My Computer</div>
 </div>
-
-    <div class="icon">
-        <a href="about.html">
-            <div class="pageImage"></div>
-            <div class="label">Projects</div>
-            <div class="tooltip">My work & experiments</div>
-        </a>
     </div>
+    <div class="icon" data-window="aboutWindow">
+    <div class="pageImage"></div>
+    <div class="label">About</div>
+     <div class="tooltip">My work & experiments</div>
+
+        <div class="window" id="aboutWindow">
+    <div class="title-bar">
+        <span class="title-text">About Me</span>
+        <div class="window-buttons">
+            <span class="minimize">_</span>
+            <span class="close">✕</span>
+        </div>
+    </div>
+
+    <div class="window-content">
+        <p>Loading...</p>
+    </div>
+</div>
+
+</div>
      <div class="icon">
         <a href="about.html">
             <div class="pageImage"></div>
@@ -193,6 +206,13 @@ a:hover {
         <div class="start-menu"></div>
     </div>
 </div>
+
+    <div id="contextMenu">
+    <div class="menu-item" id="openItem">Open</div>
+    <div class="menu-item">Rename</div>
+    <div class="menu-item">Properties</div>
+</div>
+
 
 <script>
 $(function() {
