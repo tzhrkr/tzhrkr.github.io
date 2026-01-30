@@ -1,10 +1,183 @@
+
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Tzipporah Harker</title>
-  </head>
-  <body>
-    <h1>Tzipi Harker [t͡sɪpi hɑɹkɝ]</h1>
-    <p>Party like it's 3012 2nite</p>
-  </body>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tzipi Harker [t͡sɪpi hɑɹkɝ]</title>
+
+<link rel="icon" href="favicon.ico">
+
+<!-- jQuery + UI (for dragging icons) -->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "MS Sans Serif", sans-serif;
+    font-size: 14px;
+    color: #3e423d;
+
+    background-image: url('https://i.pinimg.com/736x/09/c4/8e/09c48e721d23978d1818871830e88476.jpg');
+    background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+/* Links */
+a {
+    color: #0645AD;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* Sprite */
+.myComputer, .pageImage, .start, .start:hover, .start-menu, #profile {
+    background-image: url("https://static.tumblr.com/7ca5bgd/JuTmz6clp/xp_icons.png");
+}
+
+/* Desktop icons */
+#menu {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+}
+
+.icon {
+    margin-bottom: 15px;
+    text-align: center;
+    cursor: move;
+}
+
+.label {
+    color: white;
+    text-shadow: 1px 1px black;
+    font-size: 12px;
+}
+
+.myComputer {
+    width: 40px;
+    height: 40px;
+    background-position: 0 0;
+    margin: auto;
+}
+
+.pageImage {
+    width: 40px;
+    height: 40px;
+    background-position: 0 -160px;
+    margin: auto;
+}
+
+/* Profile window */
+#profile {
+    position: absolute;
+    top: 150px;
+    left: 850px;
+    width: 300px;
+    height: 216px;
+    background-position: -336px -238px;
+    color: white;
+}
+
+.pro-title {
+    position: absolute;
+    top: 8px;
+    left: 30px;
+    font-weight: bold;
+}
+
+.pro-description {
+    position: absolute;
+    top: 45px;
+    left: 60px;
+    width: 220px;
+    height: 125px;
+    overflow: auto;
+    font-size: 12px;
+}
+
+/* Taskbar */
+#submenu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 30px;
+    width: 100%;
+    background-image: url('https://static.tumblr.com/7ca5bgd/3Rrms4bv0/blue_menu.png');
+    background-repeat: repeat-x;
+}
+
+.start {
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    background-position: -41px -172px;
+}
+
+.start:hover {
+    background-position: -41px -206px;
+}
+
+.start-menu {
+    display: none;
+    position: absolute;
+    bottom: 30px;
+    width: 334px;
+    height: 420px;
+    background-position: 0 -239px;
+}
+
+.start:hover .start-menu {
+    display: block;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Desktop -->
+<div id="menu">
+    <div class="icon">
+        <div class="myComputer"></div>
+        <div class="label">My Computer</div>
+    </div>
+
+    <div class="icon">
+        <a href="about.html">
+            <div class="pageImage"></div>
+            <div class="label">About</div>
+        </a>
+    </div>
+</div>
+
+<!-- Profile window -->
+<div id="profile">
+    <div class="pro-title">Tzipi Harker</div>
+    <div class="pro-description">
+        This is a GitHub Pages version of a Windows XP–style site.<br><br>
+        You can put your bio, links, or anything here.
+    </div>
+</div>
+
+<!-- Taskbar -->
+<div id="submenu">
+    <div class="start">
+        <div class="start-menu"></div>
+    </div>
+</div>
+
+<script>
+$(function() {
+    $(".icon").draggable();
+});
+</script>
+
+</body>
 </html>
+
