@@ -75,6 +75,7 @@ a:hover {
 }
 
 /* Profile window */
+
 #profile {
     position: absolute;
     top: 100px;
@@ -143,25 +144,46 @@ a:hover {
 
 <!-- Desktop -->
 <div id="menu">
-    <div class="icon">
-        <div class="myComputer"></div>
-        <div class="label">About Me</div>
-    </div>
+   <div class="icon" id="openProfile">
+    <div class="myComputer"></div>
+    <div class="label">My Computer</div>
+</div>
 
     <div class="icon">
         <a href="about.html">
             <div class="pageImage"></div>
             <div class="label">Projects</div>
+            <div class="tooltip">My work & experiments</div>
+        </a>
+    </div>
+     <div class="icon">
+        <a href="about.html">
+            <div class="pageImage"></div>
+            <div class="label">3-a-day Joyous</div>
+            <div class="tooltip">A list of poems, short stories, and essays to read!</div>
+        <div class="icon">
+        <a href="about.html">
+            <div class="pageImage"></div>
+            <div class="label">LinkedIn</div>
+            <div class="tooltip">tl;dr i'm in school and i work at a museum</div>
         </a>
     </div>
 </div>
 
+    
+
 <!-- Profile window -->
-<div id="profile">
-    <div class="pro-title">Tzipi Harker [t͡sɪpi hɑɹkɝ]</div>
-    <div class="pro-description">
+<div class="window" id="profileWindow">
+    <div class="title-bar">
+        <span class="title-text">Tzipi Harker [t͡sɪpi hɑɹkɝ]</span>
+        <div class="window-buttons">
+            <span class="minimize">_</span>
+            <span class="close">✕</span>
+        </div>
+    </div>
+    <div class="window-content">
         Hi! I'm a senior at the University of Maryland studying Linguistics and Communication disorders. 
-        Contact: tzipporahharker@gmail.com
+        Contact: tzipporahharker@gmail.com, LinkedIn
     </div>
 </div>
 
@@ -175,6 +197,9 @@ a:hover {
 <script>
 $(function() {
     $(".icon").draggable();
+    $("#profile").draggable({
+        handle: ".pro-title" // drag by title bar only
+    });
 });
 </script>
 
